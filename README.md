@@ -5,11 +5,15 @@ This project focuses on implementing a Continuous Integration (CI) and Continuou
 
 ### Project Overview
 
--Performs static code analysis and Quality Gate using sonarqube
--Builds a Docker image for the project and Tags and pushes the Docker image to ECR.
--scans the Docker image for vulnerabilities and produces a report.
--Use Terraform to create an EKS cluster and related resources.
--Use ArgoCD to deploy the application using Kubernetes YAML files. The pods are monitored using Grafana & Prometheus.
+This project demonstrates deploying an **Youtube clone** using a set of DevOps tools and practices:
+
+- **Static Code Analysis:** Performs static code analysis and enforces a **Quality Gate** using **SonarQube**.
+- **Containerization:** Builds a Docker image for the project, tags it, and pushes it to **Amazon ECR**.
+- **Vulnerability Scanning:** Scans the Docker image for vulnerabilities using **Trivy** and produces a detailed report.
+- **Infrastructure as Code (IaC):** Uses **Terraform** to provision an **EKS cluster** and its related resources.
+- **Continuous Deployment:** Deploys the application to Kubernetes using **ArgoCD** and **Kubernetes YAML files**.
+- **Monitoring and Observability:** Monitors the application's pods using **Grafana** and **Prometheus**.
+
 
 ### ⚙️  Tools & Technologies:
 
