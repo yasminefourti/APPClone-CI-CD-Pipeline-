@@ -1,8 +1,17 @@
 # Youtube clone - CI/CD Pipeline 🚀
+## CI/CD Pipeline for Deploying a Secure Video Streaming Application on AWS
 
 This project focuses on implementing a Continuous Integration (CI) and Continuous Deployment (CD) pipeline using Jenkins. The goal is to deploy a clone of the YouTube application to Amazon Elastic Container Registry (ECR) while incorporating security vulnerability scanning with Trivy. The pipeline also integrates SonarQube for static code analysis and quality gate checks.
 
-## ⚙️  Tools & Technologies:
+### Project Overview
+
+-Performs static code analysis and Quality Gate using sonarqube
+-Builds a Docker image for the project and Tags and pushes the Docker image to ECR.
+-scans the Docker image for vulnerabilities and produces a report.
+-Use Terraform to create an EKS cluster and related resources.
+-Use ArgoCD to deploy the application using Kubernetes YAML files. The pods are monitored using Grafana & Prometheus.
+
+### ⚙️  Tools & Technologies:
 
 1. **Terraform**: Infrastructure as Code (IaC) tool used to create AWS resources such as EC2 instances and EKS clusters.  
 2. **GitHub**: Source code management platform for version control.  
