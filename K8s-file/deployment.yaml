@@ -1,23 +1,19 @@
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pandacloud-app
-  labels:
-    app: pandacloud-app
+  name: youtube-app-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: pandacloud-app
+      app: youtube-app
   template:
     metadata:
       labels:
-        app: pandacloud-app
+        app: youtube-app
     spec:
       containers:
-      - name: pandacloud-container
-        image: 309395755719.dkr.ecr.us-east-1.amazonaws.com/amazon-prime:latest
+      - name: youtube-app
+        image: yasminefourti/youtube-app:latest  # Remplace par l'image de ton registre
         ports:
-        - containerPort: 3000
-...
+        - containerPort: 8080

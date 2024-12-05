@@ -1,17 +1,14 @@
----
 apiVersion: v1
 kind: Service
 metadata:
-  name: pandacloud-app
+  name: youtube-app-service
   labels:
-    app: pandacloud-app
+    app: youtube-app
 spec:
-  ports:
-  - name: http
-    port: 3000
-    protocol: TCP
-    targetPort: 3000
   selector:
-    app: pandacloud-app
-  type: LoadBalancer
-...
+    app: youtube-app
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+  type: LoadBalancer  # Si tu utilises un cloud, sinon utilise NodePort ou ClusterIP
